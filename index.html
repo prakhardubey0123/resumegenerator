@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Resume Generator</title>
+  </head>
+
+  <body>
+    <!-- Here is the html code -->
+    <div class="container" id="cv-form">
+      <h1 class="text-center my-6">Resume Generator</h1>
+      <p class="text-center my-6">By me</p>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Personal Information</h3>
+          <div class="form-group">
+            <label for="nameField"> Your Name </label>
+            <input
+              type="text"
+              placeholder="Enter here"
+              id="nameField"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="PhoneField">Phone Number</label>
+            <input
+              type="text"
+              id="PhoneField"
+              placeholder="Enter Number"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="AddressField">Address</label>
+            <textarea
+              id="AddressField"
+              placeholder="Enter the address"
+              class="form-control"
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="form-group mt-3">
+            <label for="">Select photo</label>
+            <input id="imgf" type="file" class="form-control">
+          </div>
+
+          <p class="text-secondary my-3">Important Links</p>
+          <div class="form-group mt-2">
+            <label for="FacebookLink">FaceBook </label>
+            <input
+              type="text"
+              id="FacebookLink"
+              placeholder="Enter the facebook Link"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="GithubLink">Github</label>
+            <input
+              type="text"
+              id="GithubLink"
+              class="form-control"
+              placeholder="Enter Here"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="LinkedIDLink">LinkedIn</label>
+            <input
+              type="text"
+              id="LinkedIDLink"
+              placeholder="Enter here"
+              class="form-control"
+            />
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h3>Professional Information</h3>
+          <div class="form-group mt-2">
+            <label for="">Objective </label>
+            <textarea
+              placeholder="Enter Here"
+              id="obj"
+              rows="5"
+              class="form-control"
+            ></textarea>
+          </div>
+          <div class="form-group mt-2" id="we">
+            <label for="">WorkEX</label>
+            <textarea
+              placeholder="Enter here"
+              rows="3"
+              class="form-control weField"
+            ></textarea>
+            <div class="container text-center mt-2" id="weAddbutton">
+              <button
+                onclick="Addnewwef()
+                        "
+                class="btn btn-primary btn-sm"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+          <div class="form-group mt-2" id="adu">
+            <label for="Qualification">Academic Qualification</label>
+            <textarea
+              placeholder="Enter Here"
+              rows="3"
+              class="form-control eqqual"
+            ></textarea>
+            <div class="container text-center mt-2" id="acadQualAddButton">
+              <button onclick="Addedu()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center mt-3">
+        <button onclick="generateCV()" class="btn btn-primary btn-lg">generateCV</button>
+      </div>
+    </div>
+
+    <!-- Cv Template -->
+    <div class="container" id="cvtemplate">
+      <div class="row">
+        <div class="col-md-4 py-5 background">
+          <!-- first col -->
+          <img
+            src="assests\images1.jpg"
+            alt="no img"
+            class="img-fluid"
+            id="myimg"
+          />
+          <div class="container">
+            <p id="namet">Abc</p>
+            <p id="phonet">123456789</p>
+            <p id="addresst">Address</p>
+            <hr />
+            <p><a id="fbt"  href="">fb</a></p>
+            <p><a id="gitT" href="">Github</a></p>
+            <p><a id="linkT" href="">linkedin</a></p>
+          </div>
+        </div>
+
+        <div class="col-md-8 py-5">
+          <!-- second col -->
+          <h1 id="namet2" class="text-center demn">Prakhar Dubey</h1>
+          <!-- Objective card -->
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Objective</h3>
+            </div>
+            <div class="car-body">
+              <p id="objt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                deleniti consectetur velit dolore rem optio nulla. Magni eius
+                illo, minima quasi necessitatibus nam porro a neque, modi,
+                impedit facilis voluptates?
+              </p>
+            </div>
+          </div>
+
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Workex</h3>
+            </div>
+            <div class="card-body">
+              <ul id="wet">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  vitae!
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  vitae!
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  vitae!
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Qualifications</h3>
+            </div>
+            <div class="card-footer">
+              <ul id="qt">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Mollitia, quas.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  vitae!
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  vitae!
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="container mt-3 text-center">
+            <button onclick="printcv()" class="btn background">print</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    "
+  </body>
+</html>

@@ -1,0 +1,24 @@
+/* body{
+    background-color: aqua;
+} */
+
+ #cv-form{
+     /* display: none   */
+} 
+
+#cvtemplate
+{
+     display: none; 
+}
+#myimg{
+    border: 1px solid black !important;
+    border-radius: 40%;
+    width: 200px;
+}
+.background{
+    background-color: blanchedalmond;
+
+}
+ .demn{
+    font-weight: 980;
+ }
